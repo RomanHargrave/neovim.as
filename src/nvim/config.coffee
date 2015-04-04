@@ -1,6 +1,7 @@
 # config.coffee
-# user configs
+# user configs & CSS
 # Copyright (c) 2015 Lu Wang <coolwanglu@gmail.com>
+# Modified 2015 Roman Hargrave <roman@hargrave.info>
 
 remote = require 'remote'
 path = require 'path'
@@ -14,7 +15,11 @@ config =
   row: 80
   col: 40
   font: '13px Inconsolata, Monaco, Consolas, \'Source Code Pro\', \'Ubuntu Mono\', \'DejaVu Sans Mono\', \'Courier New\', Courier, monospace'
+  stylesheet: null
   blink_cursor: true
+  debug:
+    show_tools: false
+    detach_tools: true
 
 user_config_file_name = path.join app.getPath('userData'), 'config.cson'
 try
